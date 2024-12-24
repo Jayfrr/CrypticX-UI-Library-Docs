@@ -1,0 +1,53 @@
+// Library Loader
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Jayfrr/CrypticX-library/refs/heads/main/Ui%20Lib"))()
+
+
+// Create the Library Window 
+local Window = Library:Create("Script  Name","Baseplate")
+
+
+// Create a Tab 
+local Tab1 = Window:Tab("Tab 1",true)
+
+
+//create a Label
+Tab1:Label("Label name")
+
+Tab1:Button("Enable Aimbot",function()
+print("pressed btn")
+end) 
+
+
+// Create a Keybind
+Tab1:Keybind("Keybind",Enum.KeyCode.F,function()
+print("Pressed key")
+end)
+
+
+// Create a Text Box
+Tab1:Textbox("Text Box","Enter Text",function(txt)
+print(txt)
+end)
+
+
+// Create a Dropdown
+Tab1:Dropdown("Dropdown",{"Option 1","Option 2","Option 3"},function(current)
+print(current)
+end)
+
+// Create a Toggle 
+Tab1:Toggle("Toggle",function(x)
+print(x)
+end)
+
+// Create a Slider
+Tab1:Slider("Slider",16,500,function(s)
+print(s)
+end)
+
+
+// Create a UI Toggle Keybind
+Tab2:Keybind("Toggle",Enum.KeyCode.RightShift,function()
+Library:Toggle()
+end)
